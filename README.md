@@ -37,11 +37,3 @@ The chatbot asks domain-specific questions, evaluates answers, provides construc
 - ✅ Feedback-based learning system  
 - ✅ Personalized skill improvement  
 
----
-
-## 📂 Project Setup
-
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/Pratibha-Maurya23/HCL-GUVI-Hackathon-Project.git
-cd HCL-GUVI-Hackathon-Project
