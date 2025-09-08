@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interview Prep Bot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+  <div id="app" class="bg-white p-8 rounded-xl shadow-2xl w-full max-w-2xl">
+    <h1 class="text-3xl font-bold text-gray-800 text-center mb-6">Interview Prep Bot</h1>
+
+    <!-- Setup View -->
+    <div id="setup-view" class="space-y-6">
+      <p class="text-gray-600 text-center">Choose your role and mode to begin.</p>
+      <div>
+        <label for="role" class="block mb-1">Target Job Role</label>
+        <select id="role" class="w-full border rounded p-2">
+          <option>Software Engineer</option>
+          <option>Product Manager</option>
+          <option>Data Analyst</option>
+          <option>UX Designer</option>
+        </select>
+      </div>
+      <div>
+        <label for="mode" class="block mb-1">Interview Mode</label>
+        <select id="mode" class="w-full border rounded p-2">
+          <option>Technical</option>
+          <option>Behavioral</option>
+        </select>
+      </div>
+      <div>
+        <label for="domain" class="block mb-1">Domain (Optional)</label>
+        <input id="domain" class="w-full border rounded p-2" placeholder="e.g. Frontend, Backend">
+      </div>
+      <button id="start-btn" class="w-full bg-blue-600 text-white p-3 rounded">Start Interview</button>
+    </div>
+
+    <!-- Interview View -->
+    <div id="interview-view" class="hidden space-y-4">
+      <div class="bg-gray-50 p-4 rounded border">
+        <p class="text-sm text-gray-500">Bot</p>
+        <div id="question-display" class="text-lg font-medium"></div>
+      </div>
+      <div id="feedback-display" class="hidden p-4 bg-yellow-50 border rounded"></div>
+      <textarea id="user-input" rows="4" class="w-full border rounded p-2" placeholder="Type your answer..."></textarea>
+      <div class="flex gap-2">
+        <button id="submit-btn" class="flex-1 bg-green-600 text-white p-3 rounded">Submit</button>
+        <button id="skip-btn" class="flex-1 bg-gray-400 text-white p-3 rounded">Skip</button>
+        <button id="retry-btn" class="flex-1 bg-red-400 text-white p-3 rounded">Retry</button>
+      </div>
+      <div id="loading-spinner" class="hidden text-center">Loading...</div>
+    </div>
+
+    <!-- Summary View -->
+    <div id="summary-view" class="hidden space-y-4">
+      <h2 class="text-2xl font-semibold text-center">Interview Summary</h2>
+      <div id="summary-content" class="bg-gray-50 p-4 rounded border"></div>
+      <button id="new-interview-btn" class="w-full bg-blue-600 text-white p-3 rounded">New Interview</button>
+    </div>
+
+    <!-- Error -->
+    <div id="error-message" class="hidden mt-4 p-4 rounded bg-red-100 text-red-700 border"></div>
+  </div>
+   <script src="app.js"></script>
+</body>
+</html>
